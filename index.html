@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FFFFFF">
+<title>IT Training in Hoshiarpur – Agentic AI, Web Development & Automation | Algora</title>
+<meta name="description" content="Algora is an IT training center near Govt. College, Hoshiarpur. Learn Agentic AI, Website Development, Automation Workflows and Freelancing tools with project-based training.">
+
+<!-- OPTIONAL fonts (delete these 3 lines to use system fonts) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+
+<style>
+/* =============== THEME – change colours here =============== */
+:root{
+  --bg:#ffffff;
+  --card:#f4f4f6;
+  --text:#171719;
+  --muted:#6b6c75;
+  --blue:#1b4dfe;
+  --violet:#7c3aed;
+  --dark:#171719;
+  --radius:32px;
+  --max:1240px;
+  --serif:'Instrument Serif',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh}
+::selection{background:#ddd6fe;color:#000}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+button{font:inherit;color:inherit}
+.container{max-width:var(--max);margin:0 auto;padding:0 24px}
+.ic{width:1em;height:1em;fill:currentColor;display:block}
+h1,h2,h3{letter-spacing:-.03em;line-height:1.05;font-weight:700}
+h2{font-size:clamp(2.2rem,5vw,4rem)}
+h2 em,.serif{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--blue);letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:1.1rem;margin-top:16px}
+
+/* ---------- Buttons ---------- */
+.button{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;background:var(--text);color:#fff;font-weight:600;font-size:.95rem;border:0;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s}
+.button svg{width:16px;height:16px}
+.button:hover{background:var(--blue);transform:translateY(-2px);box-shadow:0 10px 30px rgba(27,77,254,.3)}
+.button.white{background:#fff;color:var(--text)}
+.button.white:hover{background:#eef1ff;color:var(--blue)}
+
+/* ---------- Header ---------- */
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid #ececf0}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.logo img{height:38px;width:auto}
+.nav-links{display:flex;gap:30px;font-size:.92rem;font-weight:500;color:var(--muted)}
+.nav-links a:hover{color:var(--text)}
+.nav-cta .button{padding:12px 22px}
+.menu-btn{display:none;background:none;border:0;cursor:pointer;width:28px;height:28px}
+.menu-btn svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:2}
+.mobile{display:none;flex-direction:column;gap:6px;padding:12px 24px 28px;background:#fff;border-top:1px solid #ececf0}
+.mobile.open{display:flex}
+.mobile a:not(.button){padding:12px 0;font-size:1.15rem;font-weight:600;border-bottom:1px solid #f0f0f3}
+.mobile .button{margin-top:16px;justify-content:center}
+
+/* ---------- Hero ---------- */
+.hero{padding:80px 0 72px;text-align:center}
+.hero h1{font-size:clamp(2.8rem,8.4vw,7.2rem);font-weight:800;line-height:1.08;letter-spacing:-.045em;display:flex;flex-direction:column;align-items:center;gap:6px}
+.hero-line{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.12em .22em}
+.phrase{display:inline-flex;align-items:center;gap:.22em}
+.tools{display:inline-flex;align-items:center}
+.tool{width:.78em;height:.78em;border-radius:24%;background:#fff;border:1px solid #e6e6ea;box-shadow:0 8px 24px rgba(0,0,0,.08);display:grid;place-items:center;font-size:inherit;margin-left:-.18em;padding:.17em}
+.tool:first-child{margin-left:0}
+.tool:nth-child(1){transform:rotate(-6deg)}
+.tool:nth-child(2){transform:rotate(4deg);z-index:2}
+.tool:nth-child(3){transform:rotate(-3deg)}
+.tool.dark{background:#171719;color:#fff;border-color:#171719}
+.tool.claude{background:#d97757;color:#fff;border-color:#d97757}
+.tool.codex{background:#5d6bff;color:#fff;border-color:#5d6bff}
+.tool.vs{background:#2f80d1;color:#fff;border-color:#2f80d1}
+.tool.shop{background:#7ab55c;color:#fff;border-color:#7ab55c}
+.tool.stripe{background:#635bff;color:#fff;border-color:#635bff}
+.tool.n8n{background:#ea4b71;color:#fff;border-color:#ea4b71}
+.tool.make{background:#6d00cc;color:#fff;border-color:#6d00cc}
+.tool .ic{width:100%;height:100%}
+.hero-photo{width:1.9em;height:.9em;border-radius:.2em;background:linear-gradient(135deg,#dfe6ff,#efe6ff);border:1px solid #e1e1ea;box-shadow:0 8px 24px rgba(0,0,0,.08);overflow:hidden;transform:rotate(-2deg)}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.pill-word{position:relative;display:inline-block;color:#fff;padding:0 .26em;z-index:0}
+.pill-word::before{content:"";position:absolute;inset:.04em 0 .02em;background:var(--blue);border-radius:999px;z-index:-1}
+.hero-bottom{margin-top:48px;display:flex;flex-direction:column;align-items:center;gap:22px}
+.hero-desc{max-width:640px;color:var(--muted);font-size:1.2rem}
+.hero-price{font-size:.9rem;color:var(--muted);margin-top:-6px}
+.hero-trust{display:flex;flex-wrap:wrap;gap:20px 36px;justify-content:center;align-items:center;margin-top:16px;font-size:.9rem;font-weight:500}
+.avatars{display:flex}
+.avatars span{width:42px;height:42px;border-radius:50%;border:3px solid #fff;margin-left:-10px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:.85rem}
+.avatars span:first-child{margin-left:0;background:#1b4dfe}
+.avatars span:nth-child(2){background:#7c3aed}
+.avatars span:nth-child(3){background:#d97757}
+.rating{display:flex;align-items:center;gap:8px}
+.stars{display:flex;color:#f5a623}
+.stars svg{width:14px;height:14px;fill:currentColor}
+.award{display:flex;align-items:center;gap:10px}
+.award b{width:34px;height:34px;border-radius:50%;background:var(--text);color:#fff;display:grid;place-items:center;font-size:.8rem}
+.award strong{display:block;font-weight:700}
+
+/* ---------- Tools marquee ---------- */
+.marquee{padding:36px 0 56px;text-align:center}
+.marquee h2{font-size:.82rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:26px}
+.marquee-view{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marquee-belt{display:flex;width:max-content;animation:belt 36s linear infinite}
+.marquee-track{display:flex;gap:56px;padding-right:56px}
+.marquee-view:hover .marquee-belt{animation-play-state:paused}
+.logo-item{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.25rem;color:#8a8b94;white-space:nowrap}
+.logo-item .ic{width:28px;height:28px}
+@keyframes belt{to{transform:translateX(-50%)}}
+
+/* ---------- Promise ---------- */
+.promise{padding:60px 0 100px}
+.promise-layout{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}
+.frame{border-radius:var(--radius);overflow:hidden;background:linear-gradient(135deg,#dfe6ff,#efe6ff 60%,#ffe9e0);aspect-ratio:4/3;position:relative;display:grid;place-items:center;color:#8a8fb3;font-weight:600;font-size:.95rem}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.promise-visual{position:relative}
+.bubble{position:absolute;padding:8px 20px;border-radius:999px;color:#fff;font-weight:600;font-size:.95rem;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.bubble.a{background:var(--blue);left:-14px;bottom:36px;transform:rotate(-6deg)}
+.bubble.b{background:var(--violet);right:-10px;bottom:90px;transform:rotate(5deg)}
+.promise-copy{font-size:clamp(1.7rem,3.2vw,2.8rem);font-weight:600;line-height:1.2;letter-spacing:-.03em}
+.grad{background:linear-gradient(90deg,var(--blue),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- Solutions ---------- */
+.solutions{padding:40px 0 100px}
+.section-head{text-align:center;max-width:760px;margin:0 auto 56px}
+.solution-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.solution-card{background:var(--card);border-radius:var(--radius);padding:40px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.solution-card:hover{transform:translateY(-5px);box-shadow:0 24px 50px rgba(0,0,0,.08)}
+.solution-card h3{font-size:2rem;margin-bottom:14px}
+.solution-card p{color:var(--muted);margin-bottom:26px;max-width:460px}
+.solution-card .button{align-self:flex-start;margin-bottom:30px}
+.card-tools{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+.card-tools li{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:8px 16px 8px 12px;font-size:.85rem;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.card-tools .ic{width:18px;height:18px;color:var(--c,#171719)}
+.card-tools i{width:10px;height:10px;border-radius:50%;background:var(--c,#171719);display:block}
+.solutions-cta{text-align:center;margin-top:44px}
+
+/* ---------- Projects ---------- */
+.projects{padding:40px 0 100px}
+.project-list{display:flex;flex-direction:column}
+.project{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:44px 0;border-top:1px solid #e6e6ea}
+.project:last-child{border-bottom:1px solid #e6e6ea}
+.project h3{font-size:clamp(2rem,4vw,3.4rem);margin-bottom:14px}
+.project span{display:inline-block;font-size:.82rem;font-weight:600;color:var(--blue);background:#eaeeff;padding:5px 14px;border-radius:999px;margin-bottom:14px}
+.project p{color:var(--muted);max-width:480px}
+.project .frame{aspect-ratio:16/9}
+
+/* ---------- Quote ---------- */
+.quote{padding:40px 0 110px;text-align:center}
+.quote blockquote{font-size:clamp(1.9rem,4.4vw,3.6rem);font-weight:600;line-height:1.18;letter-spacing:-.035em;max-width:1000px;margin:0 auto 36px}
+.q-pill{display:inline-block;background:var(--blue);color:#fff;border-radius:999px;padding:0 .3em}
+.q-mark{background:linear-gradient(90deg,#dfe6ff,#efe6ff);border-radius:.3em;padding:0 .2em}
+.quote-author{display:inline-flex;align-items:center;gap:14px;text-align:left;font-weight:700}
+.quote-author .av{width:52px;height:52px;border-radius:50%;background:var(--violet);color:#fff;display:grid;place-items:center}
+.quote-author small{display:block;font-weight:500;color:var(--muted)}
+
+/* ---------- Dark statement ---------- */
+.dark{background:var(--dark);color:#fff;border-radius:44px;margin:0 16px;padding:110px 0;position:relative;overflow:hidden}
+.dark::before{content:"";position:absolute;width:900px;height:900px;left:50%;top:-520px;transform:translateX(-50%);background:radial-gradient(circle,rgba(27,77,254,.45),transparent 65%)}
+.dark .container{position:relative}
+.dark h2{font-size:clamp(2.6rem,6.4vw,5.6rem);font-weight:800;line-height:1.05;margin-bottom:44px}
+.dark h2 em{color:#9db4ff}
+.founders{display:flex;align-items:center;gap:16px;margin-bottom:64px}
+.founders .frame{width:120px;aspect-ratio:3/2;border-radius:18px;font-size:.7rem}
+.founders strong{display:block}
+.founders small{color:#9a9ba3}
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;border-top:1px solid rgba(255,255,255,.14);padding-top:44px}
+.benefits h3{font-size:1.45rem;margin-bottom:12px;white-space:pre-line}
+.benefits p{color:#a5a6ae;font-size:.97rem}
+
+/* ---------- Investment ---------- */
+.investment{padding:110px 0}
+.panel{background:var(--card);border-radius:44px;padding:64px;display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:start}
+.panel h2 span{display:block}
+.panel .sub{max-width:360px}
+.panel-action{margin-top:32px}
+.panel-action small{display:block;margin-top:14px;color:var(--muted);font-size:.9rem}
+details{border-bottom:1px solid #dcdce2}
+details:first-child{border-top:1px solid #dcdce2}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font-weight:600;font-size:1.1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:12px;height:12px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);transition:transform .25s;flex:none;margin-right:6px}
+details[open] summary::after{transform:rotate(-135deg)}
+details p{padding:0 0 24px;color:var(--muted);max-width:560px}
+details strong{color:var(--text)}
+
+/* ---------- Process ---------- */
+.process{padding:20px 0 110px}
+.process-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.process-head{position:sticky;top:110px}
+.process-head h2 em{display:block}
+.process-head .button{margin-top:30px}
+.process-list{display:flex;flex-direction:column;gap:20px}
+.process-card{background:var(--card);border-radius:var(--radius);padding:34px;display:flex;gap:26px}
+.step-num{font-size:3rem;font-weight:800;line-height:1;color:var(--blue);opacity:.25;letter-spacing:-.05em}
+.process-card h3{font-size:1.6rem;margin-bottom:10px;white-space:pre-line}
+.process-card p{color:var(--muted)}
+
+/* ---------- Testimonials ---------- */
+.testimonials{padding:20px 0 110px;overflow:hidden}
+.testimonials .section-head{margin-bottom:48px}
+.t-view{overflow:hidden}
+.t-belt{display:flex;width:max-content;animation:belt 50s linear infinite}
+.t-view:hover .t-belt{animation-play-state:paused}
+.t-track{display:flex;gap:22px;padding-right:22px}
+.t-card{width:380px;background:var(--card);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;gap:16px}
+.t-card p{color:#3d3e45;flex:1}
+.t-card figcaption{display:flex;align-items:center;gap:12px}
+.t-card .av{width:44px;height:44px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.85rem}
+.t-card small{display:block;color:var(--muted)}
+
+/* ---------- FAQ ---------- */
+.faq{padding:20px 0 110px}
+.faq-list{max-width:860px;margin:0 auto}
+
+/* ---------- Final CTA ---------- */
+.final{padding:60px 0 110px;text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;width:1000px;height:600px;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(27,77,254,.16),rgba(124,58,237,.1) 45%,transparent 70%);z-index:-1}
+.final h2{font-size:clamp(2.8rem,8vw,7rem);font-weight:800;letter-spacing:-.045em;line-height:1.02}
+.final .sub{max-width:520px;margin:22px auto 0}
+.badges{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:28px}
+.badge{padding:8px 20px;border-radius:999px;background:#fff;border:1px solid #e1e1e8;font-weight:600;font-size:.9rem;box-shadow:0 6px 18px rgba(0,0,0,.05)}
+.details{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin:48px 0 40px}
+.contact-item{display:flex;align-items:center;gap:12px;background:var(--card);padding:14px 24px 14px 16px;border-radius:999px;font-weight:500;font-style:normal}
+.contact-item .i{width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center}
+.contact-item svg{width:20px;height:20px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.final-action span{display:block;margin-top:14px;color:var(--muted);font-size:.9rem}
+
+/* ---------- Footer ---------- */
+.footer{border-top:1px solid #ececf0;padding:56px 0 40px}
+.footer-links{display:flex;flex-wrap:wrap;gap:48px 80px;margin-bottom:48px}
+.footer-links div{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-weight:500;color:var(--muted)}
+.footer-links a:hover{color:var(--text)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:.9rem}
+.footer-bottom img{height:32px;width:auto}
+
+/* ---------- Responsive ---------- */
+@media(max-width:980px){
+  .nav-links,.nav-cta{display:none}
+  .menu-btn{display:block}
+  .promise-layout,.process-layout,.panel,.project{grid-template-columns:1fr}
+  .process-head{position:static}
+  .panel{padding:36px 24px;border-radius:32px}
+  .benefits{grid-template-columns:1fr 1fr}
+  .project{gap:24px}
+  .dark{border-radius:32px;padding:80px 0}
+}
+@media(max-width:680px){
+  .solution-cards{grid-template-columns:1fr}
+  .solution-card{padding:28px}
+  .benefits{grid-template-columns:1fr}
+  .t-card{width:300px}
+  .process-card{flex-direction:column;gap:10px}
+  .hero{padding-top:56px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============ ICON LIBRARY (tool logos – keep this block) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-vscode" viewBox="0 0 16 16"><path d="M10.8634 13.9195C10.6568 14.0195 10.4233 14.0246 10.2185 13.9444C10.1162 13.9044 10.021 13.843 9.93997 13.7614L4.81616 9.06268L2.58433 10.7656C2.37657 10.9241 2.08597 10.9111 1.89301 10.7347L1.17719 10.0802C0.941168 9.86437 0.940898 9.49112 1.17661 9.27496L3.11213 7.5L1.17661 5.72504C0.940898 5.50888 0.941168 5.13563 1.17719 4.91982L1.89301 4.2653C2.08597 4.08887 2.37657 4.07588 2.58433 4.2344L4.81616 5.93732L9.93997 1.23855C9.97037 1.20797 10.0028 1.18023 10.0368 1.15538C10.2748 0.981429 10.5922 0.949298 10.8634 1.08048L13.5399 2.37507C13.8212 2.5111 14 2.79721 14 3.11109V8H10.752V4.53356L6.86419 7.5L10.752 10.4664V8H14V11.8889C14 12.2028 13.8211 12.4889 13.5399 12.625L10.8634 13.9195Z"/></symbol>
+  <symbol id="i-claude" viewBox="0 -2 18 18"><path fill-rule="evenodd" d="M4 1h10v2h2v1h2v4h-2V7h-2v6h-3V9H9v4H6V9H4v4H2V7H0V4h2V3h2V1Zm1 3h2v2H5V4Zm6 0h2v2h-2V4Z"/></symbol>
+  <symbol id="i-codex" viewBox="0 0 24 24"><mask id="codex-mask"><rect width="24" height="24" fill="#fff"/><path d="M8.4 8.6 11.6 12l-3.2 3.4M13.4 15.6h3.6" fill="none" stroke="#000" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></mask><g mask="url(#codex-mask)"><circle cx="12" cy="12" r="8"/><circle cx="19.4" cy="12" r="3.6"/><circle cx="17.23" cy="17.23" r="3.6"/><circle cx="12" cy="19.4" r="3.6"/><circle cx="6.77" cy="17.23" r="3.6"/><circle cx="4.6" cy="12" r="3.6"/><circle cx="6.77" cy="6.77" r="3.6"/><circle cx="12" cy="4.6" r="3.6"/><circle cx="17.23" cy="6.77" r="3.6"/></g></symbol>
+  <symbol id="i-shopify" viewBox="0 0 24 24"><path d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z"/></symbol>
+  <symbol id="i-stripe" viewBox="0 0 24 24"><path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"/></symbol>
+  <symbol id="i-nextjs" viewBox="0 0 24 24"><path d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727Zm-3.332-8.533 1.6 2.061V7.2h-1.6v6.245Z"/></symbol>
+  <symbol id="i-vercel" viewBox="0 0 24 24"><path d="M24 22.525H0l12-21.05 12 21.05z"/></symbol>
+  <symbol id="i-supabase" viewBox="0 0 24 24"><path d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C-.33 13.427.65 15.455 2.409 15.455h9.579l.113 7.51c.014.985 1.259 1.408 1.873.636l9.262-11.653c1.093-1.375.113-3.403-1.645-3.403h-9.642z"/></symbol>
+  <symbol id="i-astro" viewBox="0 0 24 24"><path d="M8.358 20.162c-1.186-1.07-1.532-3.316-1.038-4.944.856 1.026 2.043 1.352 3.272 1.535 1.897.283 3.76.177 5.522-.678.202-.098.388-.229.608-.36.166.473.209.95.151 1.437-.14 1.185-.738 2.1-1.688 2.794-.38.277-.782.525-1.175.787-1.205.804-1.531 1.747-1.078 3.119l.044.148a3.158 3.158 0 0 1-1.407-1.188 3.31 3.31 0 0 1-.544-1.815c-.004-.32-.004-.642-.048-.958-.106-.769-.472-1.113-1.161-1.133-.707-.02-1.267.411-1.415 1.09-.012.053-.028.104-.045.165h.002zm-5.961-4.445s3.24-1.575 6.49-1.575l2.451-7.565c.092-.366.36-.614.662-.614.302 0 .57.248.662.614l2.45 7.565c3.85 0 6.491 1.575 6.491 1.575L16.088.727C15.93.285 15.663 0 15.303 0H8.697c-.36 0-.615.285-.784.727l-5.516 14.99z"/></symbol>
+  <symbol id="i-n8n" viewBox="0 0 24 24"><path d="M21.4737 5.6842c-1.1772 0-2.1663.8051-2.4468 1.8947h-2.8955c-1.235 0-2.289.893-2.492 2.111l-.1038.623a1.263 1.263 0 0 1-1.246 1.0555H11.289c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947s-2.1663.8051-2.4467 1.8947H4.973c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947C1.1311 9.4737 0 10.6047 0 12s1.131 2.5263 2.5263 2.5263c1.1772 0 2.1663-.8051 2.4468-1.8947h1.4223c.2804 1.0896 1.2696 1.8947 2.4467 1.8947 1.1772 0 2.1663-.8051 2.4468-1.8947h1.0008a1.263 1.263 0 0 1 1.2459 1.0555l.1038.623c.203 1.218 1.257 2.111 2.492 2.111h.3692c.2804 1.0895 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263c-1.1772 0-2.1664.805-2.4468 1.8947h-.3692a1.263 1.263 0 0 1-1.246-1.0555l-.1037-.623A2.52 2.52 0 0 0 13.9607 12a2.52 2.52 0 0 0 .821-1.4794l.1038-.623a1.263 1.263 0 0 1 1.2459-1.0555h2.8955c.2805 1.0896 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263m0 1.2632a1.263 1.263 0 0 1 1.2631 1.2631 1.263 1.263 0 0 1-1.2631 1.2632 1.263 1.263 0 0 1-1.2632-1.2632 1.263 1.263 0 0 1 1.2632-1.2631M2.5263 10.7368A1.263 1.263 0 0 1 3.7895 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 1.2632 12a1.263 1.263 0 0 1 1.2631-1.2632m6.3158 0A1.263 1.263 0 0 1 10.1053 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 7.579 12a1.263 1.263 0 0 1 1.2632-1.2632m10.1053 3.7895a1.263 1.263 0 0 1 1.2631 1.2632 1.263 1.263 0 0 1-1.2631 1.2631 1.263 1.263 0 0 1-1.2632-1.2631 1.263 1.263 0 0 1 1.2632-1.2632"/></symbol>
+  <symbol id="i-make" viewBox="0 0 24 24"><path d="M13.38 3.498c-.27 0-.511.19-.566.465L9.85 18.986a.578.578 0 0 0 .453.678l4.095.826a.58.58 0 0 0 .682-.455l2.963-15.021a.578.578 0 0 0-.453-.678l-4.096-.826a.589.589 0 0 0-.113-.012zm-5.876.098a.576.576 0 0 0-.516.318L.062 17.697a.575.575 0 0 0 .256.774l3.733 1.877a.578.578 0 0 0 .775-.258l6.926-13.781a.577.577 0 0 0-.256-.776L7.762 3.658a.571.571 0 0 0-.258-.062zm11.74.115a.576.576 0 0 0-.576.576v15.426c0 .318.258.578.576.578h4.178a.58.58 0 0 0 .578-.578V4.287a.578.578 0 0 0-.578-.576Z"/></symbol>
+  <symbol id="i-sheets" viewBox="0 0 24 24"><path d="M11.318 12.545H7.91v-1.909h3.41v1.91zM14.728 0v6h6l-6-6zm1.363 10.636h-3.41v1.91h3.41v-1.91zm0 3.273h-3.41v1.91h3.41v-1.91zM20.727 6.5v15.864c0 .904-.732 1.636-1.636 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.318v6.5h6.5zm-3.273 2.773H6.545v7.909h10.91v-7.91zm-6.136 4.636H7.91v1.91h3.41v-1.91z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 7h10v10M7 17 17 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<!-- ======================= HEADER ======================= -->
+<header class="header">
+  <div class="container nav">
+    <a href="#" class="logo" aria-label="Algora home">
+      <img src="logo bg.webp" alt="Algora">
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#solutions">Courses</a>
+      <a href="#projects">Projects</a>
+      <a href="#why">Why Algora</a>
+      <a href="#fees">Fees</a>
+      <a href="#process">Process</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#" class="button">Book a Free Demo <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <nav class="mobile" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="#solutions">Courses</a>
+    <a href="#projects">Projects</a>
+    <a href="#why">Why Algora</a>
+    <a href="#fees">Fees</a>
+    <a href="#process">Process</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#faq">FAQ</a>
+    <a href="#" class="button">Get guidance <svg><use href="#i-arrow"/></svg></a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero">
+  <div class="container">
+    <h1 aria-label="Websites, AI Agents and Automations that pay off">
+      <span class="hero-line">
+        <span class="phrase">Websites,
+          <span class="tools" aria-hidden="true">
+            <span class="tool vs"><svg class="ic"><use href="#i-vscode"/></svg></span>
+            <span class="tool codex"><svg class="ic"><use href="#i-codex"/></svg></span>
+            <span class="tool claude"><svg class="ic"><use href="#i-claude"/></svg></span>
+          </span>
+        </span>
+        <span class="phrase">AI Agents
+          <span class="tools" aria-hidden="true">
+            <span class="tool n8n"><svg class="ic"><use href="#i-n8n"/></svg></span>
+            <span class="tool make"><svg class="ic"><use href="#i-make"/></svg></span>
+          </span>
+        </span>
+      </span>
+      <span class="hero-line">
+        <span class="phrase">&amp; Freelancing
+          <!-- Replace with your own photo: <span class="hero-photo"><img src="hero.jpg" alt=""></span> -->
+          <span class="hero-photo" aria-hidden="true"></span>
+        </span>
+        <span>that <span class="pill-word">pay off</span></span>
+      </span>
+    </h1>
+
+    <div class="hero-bottom">
+      <p class="hero-desc">Practical IT training in Hoshiarpur. Learn Agentic AI, Website Development, Automation Workflows and Freelancing by building real projects.</p>
+      <a href="#" class="button">Get consultant <svg><use href="#i-arrow"/></svg></a>
+      <p class="hero-price">Courses starting from ₹ 5000 · Fixed, transparent fees</p>
+
+      <div class="hero-trust">
+        <div class="avatars" aria-hidden="true"><span>A</span><span>B</span><span>C</span></div>
+        <div class="rating">
+          <span class="stars" aria-hidden="true">
+            <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+          </span>
+          <span>100+ students trained</span>
+        </div>
+        <div class="award">
+          <b>A.</b>
+          <span><strong>Near Govt. College</strong>Hoshiarpur, Punjab</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= TOOLS MARQUEE ======================= -->
+<section class="marquee" aria-label="Tools you will learn">
+  <h2>Tools you will master</h2>
+  <div class="marquee-view">
+    <div class="marquee-belt">
+      <ul class="marquee-track">
+        <li class="logo-item"><svg class="ic"><use href="#i-vscode"/></svg>VS Code</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-claude"/></svg>Claude Code</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-codex"/></svg>Codex</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-n8n"/></svg>n8n</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-make"/></svg>Make</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-nextjs"/></svg>Next.js</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-vercel"/></svg>Vercel</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-supabase"/></svg>Supabase</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-astro"/></svg>Astro</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-shopify"/></svg>Shopify</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-stripe"/></svg>Stripe</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-sheets"/></svg>Google Sheets</li>
+      </ul>
+      <ul class="marquee-track" aria-hidden="true">
+        <li class="logo-item"><svg class="ic"><use href="#i-vscode"/></svg>VS Code</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-claude"/></svg>Claude Code</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-codex"/></svg>Codex</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-n8n"/></svg>n8n</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-make"/></svg>Make</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-nextjs"/></svg>Next.js</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-vercel"/></svg>Vercel</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-supabase"/></svg>Supabase</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-astro"/></svg>Astro</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-shopify"/></svg>Shopify</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-stripe"/></svg>Stripe</li>
+        <li class="logo-item"><svg class="ic"><use href="#i-sheets"/></svg>Google Sheets</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PROMISE ======================= -->
+<section class="promise" aria-labelledby="promise-title">
+  <div class="container">
+    <h2 id="promise-title" style="position:absolute;left:-9999px">What drives us</h2>
+    <div class="promise-layout">
+      <figure class="promise-visual">
+        <img src="profile.webp" alt="Algora trainers"> 
+ 
+      </figure>
+      <p class="promise-copy">
+        As a dedicated team in Hoshiarpur, we teach practical IT skills. We focus on
+        <span class="grad">quality and personal attention</span>, so every student finishes with real projects and the confidence to earn.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SOLUTIONS / COURSES ======================= -->
+<section id="solutions" class="solutions" aria-labelledby="solutions-title">
+  <div class="container">
+    <header class="section-head">
+      <h2 id="solutions-title">Job-ready <em>IT courses</em></h2>
+      <p class="sub">From AI agents to websites: learn the skills businesses are hiring and paying for.</p>
+    </header>
+
+    <div class="solution-cards">
+
+      <article class="solution-card">
+        <h3>Agentic AI</h3>
+        <p>Go beyond chatting with AI. Build agents that plan, use tools and complete tasks on their own.</p>
+        <a href="#" class="button">Enquire Now <svg><use href="#i-arrow"/></svg></a>
+        <ul class="card-tools" aria-label="Tools">
+          <li style="--c:#5d6bff"><svg class="ic"><use href="#i-codex"/></svg>Codex</li>
+          <li style="--c:#d97757"><svg class="ic"><use href="#i-claude"/></svg>Claude Code</li>
+          <li style="--c:#2f80d1"><svg class="ic"><use href="#i-vscode"/></svg>VS Code</li>
+          <li style="--c:#ea4b71"><svg class="ic"><use href="#i-n8n"/></svg>n8n</li>
+          <li style="--c:#3ecf8e"><svg class="ic"><use href="#i-supabase"/></svg>Supabase</li>
+        </ul>
+      </article>
+
+      <article class="solution-card">
+        <h3>Website Development</h3>
+        <p>From zero to a live website. Design and build fast, mobile-friendly sites and online shops.</p>
+        <a href="#" class="button">Enquire Now <svg><use href="#i-arrow"/></svg></a>
+        <ul class="card-tools" aria-label="Tools">
+          <li style="--c:#2f80d1"><svg class="ic"><use href="#i-vscode"/></svg>VS Code</li>
+          <li style="--c:#bc52ee"><svg class="ic"><use href="#i-astro"/></svg>Astro</li>
+          <li style="--c:#000"><svg class="ic"><use href="#i-nextjs"/></svg>Next.js</li>
+          <li style="--c:#000"><svg class="ic"><use href="#i-vercel"/></svg>Vercel</li>
+          <li style="--c:#7ab55c"><svg class="ic"><use href="#i-shopify"/></svg>Shopify</li>
+          <li style="--c:#635bff"><svg class="ic"><use href="#i-stripe"/></svg>Stripe</li>
+        </ul>
+      </article>
+
+      <article class="solution-card">
+        <h3>Automation Workflows</h3>
+        <p>Make repetitive work run by itself. Connect your apps and save hours every week.</p>
+        <a href="#" class="button">Enquire Now <svg><use href="#i-arrow"/></svg></a>
+        <ul class="card-tools" aria-label="Tools">
+          <li style="--c:#ea4b71"><svg class="ic"><use href="#i-n8n"/></svg>n8n</li>
+          <li style="--c:#6d00cc"><svg class="ic"><use href="#i-make"/></svg>Make</li>
+          <li style="--c:#34a853"><svg class="ic"><use href="#i-sheets"/></svg>Google Sheets</li>
+          <li style="--c:#3ecf8e"><svg class="ic"><use href="#i-supabase"/></svg>Supabase</li>
+          <li style="--c:#d97757"><svg class="ic"><use href="#i-claude"/></svg>Claude Code</li>
+        </ul>
+      </article>
+
+      <article class="solution-card">
+        <h3>Freelancing Tools</h3>
+        <p>Find clients, write winning proposals, price your work and deliver professionally on global platforms.</p>
+        <a href="#" class="button">Enquire Now <svg><use href="#i-arrow"/></svg></a>
+        <ul class="card-tools" aria-label="Tools">
+          <li style="--c:#14a800"><i></i>Upwork</li>
+          <li style="--c:#1dbf73"><i></i>Fiverr</li>
+          <li style="--c:#0a66c2"><i></i>LinkedIn</li>
+          <li style="--c:#171719"><i></i>Notion</li>
+          <li style="--c:#34a853"><svg class="ic"><use href="#i-sheets"/></svg>Sheets</li>
+          <li style="--c:#635bff"><svg class="ic"><use href="#i-stripe"/></svg>Stripe</li>
+        </ul>
+      </article>
+
+    </div>
+
+    <div class="solutions-cta">
+      <a href="#" class="button">Book a Free Demo <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PROJECTS ======================= -->
+<section id="projects" class="projects" aria-labelledby="projects-title">
+  <div class="container">
+    <header class="section-head">
+      <h2 id="projects-title">Learn by building <em>real projects</em></h2>
+      <p class="sub">A look at what you will create during your course.</p>
+    </header>
+
+    <div class="project-list">
+      <article class="project">
+        <div>
+          <span>Agentic AI</span>
+          <h3>AI Support Agent</h3>
+          <p>Build an AI agent that answers customer questions, looks up data and hands off to a human when needed.</p>
+        </div>
+        <div class="frame"><img src="agent.webp" alt="AI Support Agent"></div>
+      </article>
+
+      <article class="project">
+        <div>
+          <span>Website Development</span>
+          <h3>Business Website</h3>
+          <p>Design and launch a fast, responsive website for a local business, including contact forms and hosting.</p>
+        </div>
+        <div class="frame"><img src="web.webp" alt="AI Support Agent"></div>
+
+      </article>
+
+      <article class="project">
+        <div>
+          <span>Computer Vision</span>
+          <h3>Computer Vision</h3>
+          <p>Set up a complete YoLo based Measurement correction project using IOT</p>
+        </div>
+        <div class="frame"><img src="vision.webp" alt="Vision"></div>
+
+    </article>
+
+      <article class="project">
+        <div>
+          <span>Automation Workflows</span>
+          <h3>Lead Automation</h3>
+          <p>Capture leads from a form, save them to a sheet and send automatic follow-up messages without manual work.</p>
+        </div>
+        <div class="frame"><img src="n8n.webp" alt="n8n"></div>
+      </article>
+
+      <article class="project">
+        <div>
+          <span>Freelancing</span>
+          <h3>Freelance Profile</h3>
+          <p>Create a strong profile and portfolio, and prepare your first proposals for real client jobs.</p>
+        </div>
+        <div class="frame"><img src="free.webp" alt="freeancer"></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= QUOTE ======================= -->
+<section class="quote" aria-label="Student quote">
+  <div class="container">
+    <figure>
+      <!-- SAMPLE TEXT: replace with a real student quote -->
+      <blockquote>
+        “After training at Algora, I built my own <span class="q-pill">website</span> and my first <span class="q-mark">freelance client</span> followed soon after.”
+      </blockquote>
+      <figcaption class="quote-author">
+        <span class="av" aria-hidden="true">S</span>
+        <span>Bhanwarpreet Kaur<small>MCP</small></span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ======================= WHY (dark) ======================= -->
+<section id="why" class="dark" aria-labelledby="why-title">
+  <div class="container">
+    <h2 id="why-title">What others call extra,<br><em>is standard for us.</em></h2>
+    <div class="founders">
+      <span><strong>Maninderpal Singh &amp; Team</strong><small>Founder of Algora</small></span>
+    </div>
+    <div class="benefits">
+      <article>
+        <h3>Practical,
+not theory</h3>
+        <p>Every course is built around real projects you can show to employers and clients.</p>
+      </article>
+      <article>
+        <h3>Small batches,
+personal help</h3>
+        <p>Limited seats so your trainer can support you directly. No crowded classrooms.</p>
+      </article>
+      <article>
+        <h3>Latest tools,
+latest skills</h3>
+        <p>We teach what the industry uses today, including AI-powered workflows.</p>
+      </article>
+      <article>
+        <h3>Transparent
+fees</h3>
+        <p>We talk about fees openly before you join, not after.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= INVESTMENT / FEES ======================= -->
+<section id="fees" class="investment" aria-labelledby="fees-title">
+  <div class="container">
+    <div class="panel">
+      <div>
+        <h2 id="fees-title"><span>Great skills</span><em>from ₹ 5,000</em></h2>
+        <p class="sub">Affordable training with live projects.</p>
+        <div class="panel-action">
+          <a href="#" class="button">Book a Free Demo <svg><use href="#i-arrow"/></svg></a>
+          <small>Unlimited Demo classes. Exact fees shared after counselling.</small>
+        </div>
+      </div>
+      <div>
+        <details open>
+          <summary>Live, hands-on classes</summary>
+          <p>Every session includes <strong>practical work</strong>, so you learn by doing instead of only watching.</p>
+        </details>
+        <details>
+          <summary>Real projects for your portfolio</summary>
+          <p>Finish each course with <strong>projects you can show</strong> to employers and clients.</p>
+        </details>
+        <details>
+          <summary>Study material &amp; recordings</summary>
+          <p>Get <strong>notes and class resources</strong> so you can revise anytime.</p>
+        </details>
+        <details>
+          <summary>Doubt support</summary>
+          <p>Stuck on something? Ask your trainer and get <strong>quick help</strong>.</p>
+        </details>
+        <details>
+          <summary>Certificate of completion</summary>
+          <p>Receive an <strong>Algora certificate</strong> after completing the course and projects.</p>
+        </details>
+        <details>
+          <summary>Career &amp; freelancing guidance</summary>
+          <p>We help with your <strong>resume, profile and first proposals</strong>.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PROCESS ======================= -->
+<section id="process" class="process" aria-labelledby="process-title">
+  <div class="container process-layout">
+    <header class="process-head">
+      <h2 id="process-title">From first call <em>to first project</em></h2>
+      <p class="sub">Personal, direct and clear at every step.</p>
+      <a href="#" class="button">Book a Free Demo <svg><use href="#i-arrow"/></svg></a>
+    </header>
+    <ol class="process-list">
+      <li class="process-card">
+        <span class="step-num">01</span>
+        <div><h3>Free
+counselling</h3><p>Tell us your goals and background. We suggest the right course for you.</p></div>
+      </li>
+      <li class="process-card">
+        <span class="step-num">02</span>
+        <div><h3>Demo
+class</h3><p>Attend a free demo to meet your trainer and see how we teach.</p></div>
+      </li>
+      <li class="process-card">
+        <span class="step-num">03</span>
+        <div><h3>Learn &amp;
+build</h3><p>Join live classes and build projects step by step, with regular feedback.</p></div>
+      </li>
+      <li class="process-card">
+        <span class="step-num">04</span>
+        <div><h3>Certify &amp;
+start earning</h3><p>Get certified, polish your portfolio and start applying or freelancing.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================= TESTIMONIALS ======================= -->
+<section id="reviews" class="testimonials" aria-labelledby="reviews-title">
+  <header class="section-head">
+    <h2 id="reviews-title">What our <em>students say</em></h2>
+    <p class="sub">Sample reviews. Replace with real feedback from your students.</p>
+  </header>
+  <div class="t-view">
+    <div class="t-belt">
+      <div class="t-track">
+        <figure class="t-card"><span class="stars" aria-label="5 stars"><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg></span><p>Write a short student review here. Mention what they learned and how it helped them.</p><figcaption><span class="av">AB</span><span><strong>Student Name</strong><small>Agentic AI</small></span></figcaption></figure>
+        <figure class="t-card"><span class="stars" aria-label="5 stars"><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg></span><p>Write a short student review here. Mention what they learned and how it helped them.</p><figcaption><span class="av">CD</span><span><strong>Student Name</strong><small>Website Development</small></span></figcaption></figure>
+        <figure class="t-card"><span class="stars" aria-label="5 stars"><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg></span><p>Write a short student review here. Mention what they learned and how it helped them.</p><figcaption><span class="av">EF</span><span><strong>Student Name</strong><small>Automation Workflows</small></span></figcaption></figure>
+        <figure class="t-card"><span class="stars" aria-label="5 stars"><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg></span><p>Write a short student review here. Mention what they learned and how it helped them.</p><figcaption><span class="av">GH</span><span><strong>Student Name</strong><small>Freelancing Tools</small></span></figcaption></figure>
+      </div>
+      <div class="t-track" aria-hidden="true">
+        <figure class="t-card"><span class="stars"><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg></span><p>Write a short student review here. Mention what they learned and how it helped them.</p><figcaption><span class="av">AB</span><span><strong>Student Name</strong><small>Agentic AI</small></span></figcaption></figure>
+        <figure class="t-card"><span class="stars"><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg></span><p>Write a short student review here. Mention what they learned and how it helped them.</p><figcaption><span class="av">CD</span><span><strong>Student Name</strong><small>Website Development</small></span></figcaption></figure>
+        <figure class="t-card"><span class="stars"><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg></span><p>Write a short student review here. Mention what they learned and how it helped them.</p><figcaption><span class="av">EF</span><span><strong>Student Name</strong><small>Automation Workflows</small></span></figcaption></figure>
+        <figure class="t-card"><span class="stars"><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg><svg width="14" height="14"><use href="#i-star"/></svg></span><p>Write a short student review here. Mention what they learned and how it helped them.</p><figcaption><span class="av">GH</span><span><strong>Student Name</strong><small>Freelancing Tools</small></span></figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section id="faq" class="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <header class="section-head">
+      <h2 id="faq-title">Good questions,<br><em>clear answers</em></h2>
+      <p class="sub">The most important answers before our first conversation.</p>
+    </header>
+    <div class="faq-list">
+      <details open>
+        <summary>Who can join Algora courses?</summary>
+        <p>Students, graduates, job seekers and working professionals can join. Beginner batches need no prior coding experience.</p>
+      </details>
+      <details>
+        <summary>Where is Algora located?</summary>
+        <p>We are near Govt. College, Hoshiarpur, Punjab.</p>
+      </details>
+      <details>
+        <summary>Which courses do you offer?</summary>
+        <p>We teach Agentic AI, Website Development, Automation Workflows and Freelancing Tools. You can take one course or combine several.</p>
+      </details>
+      <details>
+        <summary>What are the fees and course duration?</summary>
+        <p>Fees will be discussed while couselling and you can get unlimited Demo classes</p>
+      </details>
+      <details>
+        <summary>Do I need my own laptop?</summary>
+        <p>A laptop is recommended for practice at home otherwise we will provide it.</p>
+      </details>
+      <details>
+        <summary>Will I get a certificate?</summary>
+        <p>Yes. You receive a certificate of completion after finishing the course and your projects.</p>
+      </details>
+      <details>
+        <summary>Can I earn through freelancing after the course?</summary>
+        <p>Our Freelancing Tools course shows you how to build a profile, find clients and deliver work. Results depend on your practice and effort.</p>
+      </details>
+      <details>
+        <summary>Are online classes available?</summary>
+        <p>Yes online classes available along 1 to 1 personal coaching</p>
+      </details>
+      <details>
+        <summary>How soon can I start?</summary>
+        <p>After the demo class and enrollment you can join the next available batch. Ask us about upcoming batch dates.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FINAL CTA ======================= -->
+<section id="contact" class="final" aria-labelledby="final-title">
+  <div class="container">
+    <h2 id="final-title">Let's build your<br><em>future</em></h2>
+    <p class="sub">Tell us what you want to learn. We look forward to helping you make something really good.</p>
+    <div class="badges">
+      <span class="badge">Expert Trainers</span>
+      <span class="badge">100+ Students Trained</span>
+    </div>
+
+    <div class="details">
+      <a href="#" class="contact-item"><span class="i"><svg viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span>info@yourdomain.com</a>
+      <a href="#" class="contact-item"><span class="i"><svg viewBox="0 0 24 24"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></span>+91 XXXXX XXXXX</a>
+      <a href="#" class="contact-item"><span class="i"><svg viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span><address>Near Govt. College, Hoshiarpur</address></a>
+    </div>
+
+    <div class="final-action">
+      <a href="#" class="button">Contact us <svg><use href="#i-arrow"/></svg></a>
+      <span>Get Demo · No obligation</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer">
+  <div class="container">
+    <nav class="footer-links" aria-label="Footer navigation">
+      <div><a href="#solutions">Courses</a><a href="#projects">Projects</a></div>
+      <div><a href="#process">How it works</a><a href="#fees">Fees</a></div>
+      <div><a href="#reviews">Reviews</a><a href="#faq">FAQ</a></div>
+      <div><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+    </nav>
+    <div class="footer-bottom">
+      <a href="#"><img src="logo bg.webp" alt="Algora"></a>
+      <span>© 2026 Algora · Near Govt. College, Hoshiarpur</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Only script on the page: mobile menu -->
+<script>
+  var btn = document.getElementById('menuBtn');
+  var menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+</script>
+
+</body>
+</html>
